@@ -1,7 +1,13 @@
 #BlueJ class context
 comment0.target=Paddle
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Paddle\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Paddle\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment1.params=isLeft
+comment1.target=Paddle(boolean)
+comment1.text=\r\n\ Paddle\ is\ used\ for\ the\ designing\ of\ the\ paddle\ and\ what\ keys\ you\ will\ be\ using\ for\ moving\r\n\ the\ two\ paddles.\r\n\ \r\n\ @params\ -\ There\ is\ a\ boolean\ parameter\ returning\ isLeft.\r\n\ @returns\ -\ There\ are\ no\ return\ types.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Paddle\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ checkKeyPress()
+comment3.text=\r\n\ checkKeyPress\ is\ used\ for\ checking\ if\ a\ certain\ key\ is\ pressed,\ and\ if\ it\ is\ the\r\n\ paddles\ will\ move\ up\ and\ down.\r\n\ \r\n\ @params\ -\ There\ are\ no\ parameters.\r\n\ \r\n
+numComments=4

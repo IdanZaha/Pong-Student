@@ -1,7 +1,19 @@
 #BlueJ class context
 comment0.target=Score
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Score\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Score\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment1.params=onLeft
+comment1.target=Score(boolean)
+comment1.text=\r\n\ Score\ is\ used\ to\ initialize\ the\ score\ and\ make\ it\ start\ at\ 0.\r\n\ \r\n\ @params\ -\ There\ is\ one\ boolean\ parameter\ controlling\ onLeft.\r\n\ @returns\ -\ There\ are\ no\ return\ types.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Score\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ displayScore()
+comment3.text=\r\n\ displayScore\ is\ the\ method\ used\ for\ the\ score\ to\ display.\r\n\ \r\n\ @params\ -\ There\ are\ no\ parameters.\r\n\ @returns\ -\ There\ are\ no\ return\ types.\r\n
+comment4.params=
+comment4.target=void\ countScore()
+comment4.text=\r\n\ countScore\ is\ the\ method\ used\ so\ if\ one\ of\ the\ players\ misses\ the\ ball\ a\ point\ is\ added\r\n\ and\ the\ score\ is\ changed.\r\n\ \r\n\ @params\ -\ There\ are\ no\ parameters.\r\n\ @returns\ -\ There\ are\ no\ return\ types.\r\n
+comment5.params=
+comment5.target=int\ getScore()
+comment5.text=\r\n\ getScore\ is\ the\ method\ used\ for\ returning\ the\ score.\r\n\ \r\n\ @params\ -\ There\ are\ no\ parameters.\r\n\ @returns\ -\ There\ is\ one\ return\ type\ that\ is\ int\ that\ is\ used\ for\ getting\ the\ score.\r\n
+numComments=6

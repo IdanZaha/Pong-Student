@@ -10,13 +10,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Score extends Actor
 {
     //TODO (18): Declare an integer instance variable called playerScore
-    
+    private int playerScore;
     
     //TODO (19): Declare a boolean instance variable called isLeft
-    
+    private boolean isLeft;
     
     //TODO (20): Declare a boolean instance variable called scoreChanged
-    
+    private boolean scoreChanged;
 
     /**
      * TODO (21): Declare a constructor for Score that has a boolean
@@ -28,7 +28,19 @@ public class Score extends Actor
      * 
      * TODO (32): Make a method call to displayScore
      */
-    
+    /**
+     * Score is used to initialize the score and make it start at 0.
+     * 
+     * @params - There is one boolean parameter controlling onLeft.
+     * @returns - There are no return types.
+     */
+    public Score(boolean onLeft)
+    {
+        playerScore = 0;
+        isLeft = onLeft;
+        displayScore();
+    }
+
 
     /**
      * Act - do whatever the Score wants to do. This method is called whenever
@@ -38,9 +50,11 @@ public class Score extends Actor
     {
         // Add your action code here.
         //TODO (33): If the score has changed...
-        
+        if(scoreChanged == true)
+        {
             //TODO (34): Display the score
-            
+            displayScore();
+        }   
     }    
 
     /**
@@ -69,7 +83,26 @@ public class Score extends Actor
      * 
      * TODO (31): The score is now updated and the display will not need to be changed. Change the value for the variable that stores this info
      */
-    
+    /**
+     * displayScore is the method used for the score to display.
+     * 
+     * @params - There are no parameters.
+     * @returns - There are no return types.
+     */
+    private void displayScore()
+    {
+        GreenfootImage display;
+        if(isLeft == true)
+        {
+            display = new GreenfootImage(Integer.toString(playerScore),30, Color.RED, Color.BLACK);
+        }
+        else
+        {
+            display = new GreenfootImage(Integer.toString(playerScore),30, Color.GREEN, Color.BLACK);
+        }
+        setImage(display);
+        scoreChanged = false;
+    }
 
     /**
      * TODO (35): Declare a public method called countScore that does not
@@ -79,13 +112,34 @@ public class Score extends Actor
      * 
      * TODO (37): The score has now changed. Change the variable that stores this info
      */
+    /**
+     * countScore is the method used so if one of the players misses the ball a point is added
+     * and the score is changed.
+     * 
+     * @params - There are no parameters.
+     * @returns - There are no return types.
+     */
+    public void countScore()
+    {
+        playerScore++;
+        scoreChanged = true;
+    }
     
-
     /**
      * TODO (38): Declare a public method called getScore that returns
      *            an integer value and has no parameters
      *          
      * TODO (39): Inside the method, return the score for the scoreboard
      */
-    
+    /**
+     * getScore is the method used for returning the score.
+     * 
+     * @params - There are no parameters.
+     * @returns - There is one return type that is int that is used for getting the score.
+     */
+    public int getScore () 
+    {
+        return playerScore;
+    }
 }
+

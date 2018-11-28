@@ -10,16 +10,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Paddle extends Actor
 {
     //TODO (108): Declare an integer instance constant called WIDTH that is initialized to 10
-    
+    private final int WIDTH = 10;
     
     //TODO (109): Declare an integer instance constant called HEIGHT that is initialize to 60
-    
+    private final int HEIGHT = 60;
     
     //TODO (110): Declare a String instance variable called upKey
-    
+    private String upKey;
     
     //TODO (111): Declare a String instance variable called downKey
-    
+    private String downKey;
     
     
     /**
@@ -49,6 +49,31 @@ public class Paddle extends Actor
      * 
      * TODO (123): Set the image of the Paddle class to paddleImage
      */
+    /**
+     * Paddle is used for the designing of the paddle and what keys you will be using for moving
+     * the two paddles.
+     * 
+     * @params - There is a boolean parameter returning isLeft.
+     * @returns - There are no return types.
+     */
+    public Paddle(boolean isLeft)
+    {
+        GreenfootImage paddleImage = new GreenfootImage(WIDTH, HEIGHT);
+        if(isLeft == true)
+        {
+            upKey = "w";
+            downKey = "s";
+            paddleImage.setColor(Color.RED);
+        }
+        else
+        {
+            upKey = "up";
+            downKey = "down";
+            paddleImage.setColor(Color.GREEN);
+        }
+        paddleImage.fillRect(0,0,WIDTH,HEIGHT);
+        setImage(paddleImage);
+    }
     
     
     /**
@@ -59,7 +84,7 @@ public class Paddle extends Actor
     {
         // Add your action code here.
         //TODO (131): Use a method to check if the player has pressed keyboard keys
-        
+        checkKeyPress();
     }    
     
     /**
@@ -74,5 +99,22 @@ public class Paddle extends Actor
      * 
      *      TODO (130): Set the location to be the current X location and 4 pixels more than the current Y location
      */
-    
+    /**
+     * checkKeyPress is used for checking if a certain key is pressed, and if it is the
+     * paddles will move up and down.
+     * 
+     * @params - There are no parameters.
+     * @returns - There are no return types.
+     */
+    private void checkKeyPress()
+    {
+        if(Greenfoot.isKeyDown(upKey)==true)
+        {
+            setLocation(getX(), getY()-4);
+        }
+        if(Greenfoot.isKeyDown(downKey)==true)
+        {
+            setLocation(getX(),getY()+4);
+        }
+    }
 }
